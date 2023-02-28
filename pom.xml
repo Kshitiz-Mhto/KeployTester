@@ -4,14 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.nkcm</groupId>
+    <groupId>io.keploy</groupId>
     <artifactId>java-sdk</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Keploy Java SDK</name>
     <description>Client Java SDK for Kepploy</description>
-    <url>https://github.com/keploy/java-sdk</url>
+    <url>https://github.com/Kshitiz-Mhto/KeployTester</url>
     <licenses>
         <license>
             <name>The Apache License, Version 2.0</name>
@@ -20,19 +20,14 @@
     </licenses>
     <developers>
         <developer>
-            <id>sarthak160</id>
-            <name>Sarthak</name>
-            <email>sarthak@keploy.io</email>
-        </developer>
-        <developer>
-            <id>gouravkrosx</id>
-            <name>Gourav Kumar</name>
-            <email>gourav.kumar@keploy.io</email>
+            <id>Kshitiz-Mhto</id>
+            <name>kshitiz</name>
+            <email>nkcmcdhy@gmail.com</email>
         </developer>
     </developers>
     <scm>
-        <connection>scm:git@github.com:keploy/java-sdk.git</connection>
-        <developerConnection>scm:git@github.com:keploy/java-sdk.git</developerConnection>
+        <connection>scm:git@github.com:KeployTestor/java-sdk.git</connection>
+        <developerConnection>scm:git@github.com:KeployTestor/java-sdk.git</developerConnection>
         <url>https://github.com/keploy/java-sdk.git</url>
     </scm>
     <modules>
