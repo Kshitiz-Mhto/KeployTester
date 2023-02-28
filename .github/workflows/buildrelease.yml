@@ -17,11 +17,9 @@ jobs:
           cache: maven
       - name: Build and Update Version
         run: |
-          ./mvnw clean install
-          ./mvnw versions:set -DnewVersion=1.0.0-SNAPSHOT
+          mvn clean install
+          mvn versions:set -DnewVersion=1.0.0-SNAPSHOT
         env:
           MAVEN_OPTS: "-Dmaven.repo.local=${{ github.workspace }}/.m2/repository"
-      - name: sbt to Maven Central
-        uses: cosmincatalin/sbt-to-maven-central@v1.0.6
-
-
+      - name: Java maven library publisher
+        uses: MathieuSoysal/Java-maven-library-publisher@v1.0.4
