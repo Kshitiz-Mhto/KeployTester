@@ -21,17 +21,7 @@ jobs:
           ./mvnw versions:set -DnewVersion=1.0.0-SNAPSHOT
         env:
           MAVEN_OPTS: "-Dmaven.repo.local=${{ github.workspace }}/.m2/repository"
-      - name: Release to Maven Central
-        # uses: sonatype-nexus-community/maven-publish@v2
-        uses: martinheinz/maven-publish-action@v1
-        with:
-          pom_file: ./pom.xml
-          # settings_file: ./settings.xml
-          gpg_key: ${{ env.GPG_PRIVATE_KEY }}
-          gpg_passphrase: ${{ env.GPG_PASSPHRASE }}
-          ossrh_username: ${{ env.OSSRH_USERNAME }}
-          ossrh_password: ${{ env.OSSRH_PASSWORD }}
-          maven_central_username: ${{ env.MAVEN_CENTRAL_USERNAME }}
-          maven_central_password: ${{ env.MAVEN_CENTRAL_PASSWORD }}
+      - name: sbt to Maven Central
+        uses: cosmincatalin/sbt-to-maven-central@v1.0.6
 
 
