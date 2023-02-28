@@ -22,18 +22,16 @@ jobs:
         env:
           MAVEN_OPTS: "-Dmaven.repo.local=${{ github.workspace }}/.m2/repository"
       - name: Release to Maven Central
-        uses: sonatype-nexus-community/maven-publish@v2
+        # uses: sonatype-nexus-community/maven-publish@v2
+        uses: martinheinz/maven-publish-action@v1
         with:
-          pomPath: your-project/pom.xml
-          publishRepositoryUrl: https://oss.sonatype.org/service/local/staging/deploy/maven2/
-          signingKeyId: ${{ secrets.GPG_KEY_ID }}
-          signingPassword: ${{ secrets.GPG_PASSPHRASE }}
-          signingPrivateKey: ${{ secrets.GPG_PRIVATE_KEY }}
-          close: 1
-          autoReleaseAfterClose: 1
-          waitBundleComplete: 1
-          groupId: io.nkcm
-          artifactId: java-sdk
-          version: 1.0.0-SNAPSHOT
-          sources: true
-          javadoc: true
+          pom_file: ./pom.xml
+          # settings_file: ./settings.xml
+          gpg_key: ${{ env.GPG_PRIVATE_KEY }}
+          gpg_passphrase: ${{ env.GPG_PASSPHRASE }}
+          ossrh_username: ${{ env.OSSRH_USERNAME }}
+          ossrh_password: ${{ env.OSSRH_PASSWORD }}
+          maven_central_username: ${{ env.MAVEN_CENTRAL_USERNAME }}
+          maven_central_password: ${{ env.MAVEN_CENTRAL_PASSWORD }}
+
+
