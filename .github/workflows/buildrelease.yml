@@ -1,14 +1,11 @@
 name: Build and Release SDK
 on:
-  push:
-    branches:
-      - main
+  release:
+    types: [created]
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
       - name: Maven Library build and publish
         uses: MathieuSoysal/Java-maven-library-publisher@v1.0.3
         with:
