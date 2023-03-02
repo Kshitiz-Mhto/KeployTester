@@ -14,7 +14,7 @@
     <!--    <description>keploy-sdk</description>-->
     <description>Client Java SDK for Keploy</description>
 
-    <url>https://github.com/keploy/java-sdk</url>
+    <url>https://github.com/KeployTestor/java-sdk</url>
     <licenses>
         <license>
             <name>The Apache License, Version 2.0</name>
@@ -23,19 +23,21 @@
     </licenses>
     <developers>
         <developer>
-            <id>sarthak160</id>
-            <name>Sarthak</name>
-            <email>sarthak@keploy.io</email>
-        </developer>
-        <developer>
-            <id>gouravkrosx</id>
-            <name>Gourav Kumar</name>
-            <email>gourav.kumar@keploy.io</email>
+            <id>Kshitiz-Mhto</id>
+            <name>kshitiz</name>
+            <email>nkcmcdhy@gmail.com</email>
         </developer>
     </developers>
+
+    <issueManagement>
+        <system>github</system>
+        <!-- FIXME replace the link to your issues -->
+        <url>https://github.com/Kshitiz-Mhto/KeployTester/issues</url>
+    </issueManagement>
+
     <scm>
-        <connection>scm:git@github.com:keploy/java-sdk.git</connection>
-        <developerConnection>scm:git@github.com:keploy/java-sdk.git</developerConnection>
+        <connection>scm:git@github.com:KeployTestor/java-sdk.git</connection>
+        <developerConnection>scm:git@github.com:KeployTestor/java-sdk.git</developerConnection>
         <url>https://github.com/keploy/java-sdk.git</url>
     </scm>
 
@@ -45,31 +47,31 @@
     <dependencies>
 
         <dependency>
-            <groupId>io.keploy</groupId>
+            <groupId>io.github.Kshitiz-Mhto</groupId>
             <artifactId>core</artifactId>
             <version>1.0.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>io.keploy</groupId>
+            <groupId>io.github.Kshitiz-Mhto</groupId>
             <artifactId>api</artifactId>
             <version>1.0.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>io.keploy</groupId>
+            <groupId>io.github.Kshitiz-Mhto</groupId>
             <artifactId>integration</artifactId>
             <version>1.0.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>io.keploy</groupId>
+            <groupId>io.github.Kshitiz-Mhto</groupId>
             <artifactId>models</artifactId>
             <version>1.0.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>io.keploy</groupId>
+            <groupId>io.github.Kshitiz-Mhto</groupId>
             <artifactId>common</artifactId>
             <version>1.0.0-SNAPSHOT</version>
             <scope>compile</scope>

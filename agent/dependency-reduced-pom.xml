@@ -10,16 +10,15 @@
   <name>Agent For Keploy SDK</name>
   <description>This agent is used to mock infra calls for an API</description>
   <url>https://github.com/keploy/java-sdk</url>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/Kshitiz-Mhto/KeployTester/issues</url>
+  </issueManagement>
   <developers>
     <developer>
-      <id>sarthak160</id>
-      <name>Sarthak</name>
-      <email>sarthak@keploy.io</email>
-    </developer>
-    <developer>
-      <id>gouravkrosx</id>
-      <name>Gourav Kumar</name>
-      <email>gourav.kumar@keploy.io</email>
+      <id>Kshitiz-Mhto</id>
+      <name>kshitiz</name>
+      <email>nkcmcdhy@gmail.com</email>
     </developer>
   </developers>
   <licenses>
@@ -29,8 +28,8 @@
     </license>
   </licenses>
   <scm>
-    <connection>scm:git@github.com:keploy/java-sdk.git</connection>
-    <developerConnection>scm:git@github.com:keploy/java-sdk.git</developerConnection>
+    <connection>scm:git@github.com:KeployTestor/java-sdk.git</connection>
+    <developerConnection>scm:git@github.com:KeployTestor/java-sdk.git</developerConnection>
     <url>https://github.com/keploy/java-sdk.git</url>
   </scm>
   <build>
@@ -48,7 +47,7 @@
               <transformers>
                 <transformer>
                   <manifestEntries>
-                    <Premain-Class>io.keploy.agent.KAgent</Premain-Class>
+                    <Premain-Class>io.github.Kshitiz-Mhto.agent.KAgent</Premain-Class>
                   </manifestEntries>
                 </transformer>
               </transformers>
