@@ -38,7 +38,7 @@
     <scm>
         <connection>scm:git@github.com:KeployTestor/java-sdk.git</connection>
         <developerConnection>scm:git@github.com:KeployTestor/java-sdk.git</developerConnection>
-        <url>https://github.com/keploy/java-sdk.git</url>
+        <url>https://github.com/Kshitiz-Mhto/KeployTester.git</url>
     </scm>
 
     <properties>
