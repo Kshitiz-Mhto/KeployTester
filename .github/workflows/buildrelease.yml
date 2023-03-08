@@ -2,16 +2,48 @@ name: Build and Release SDK
 on:
   release:
     types: [created]
+# jobs:
+#   build-and-release:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Maven Library build and publish
+#         uses: MathieuSoysal/Java-maven-library-publisher@v1.0.3
+#         with:
+#           nexus-username: ${{ secrets.NEXUS_USERNAME }}
+#           nexus-password: ${{ secrets.NEXUS_PASSWORD }}
+#           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+#           gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
+#           github-token: ${{ secrets.TOKEN }}
+#           java-version: 11
 jobs:
-  build-and-release:
+  build:
     runs-on: ubuntu-latest
+    env:
+      JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64
     steps:
-      - name: Maven Library build and publish
-        uses: MathieuSoysal/Java-maven-library-publisher@v1.0.3
+      - uses: actions/checkout@v2
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
         with:
-          nexus-username: ${{ secrets.NEXUS_USERNAME }}
-          nexus-password: ${{ secrets.NEXUS_PASSWORD }}
-          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
-          gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
-          github-token: ${{ secrets.TOKEN }}
           java-version: 11
+      - name: Install Maven
+        run: sudo apt-get install -y maven
+      - name: Test project
+        run: mvn test
+      - name: Package project
+        run: mvn package
+      - name: Update project version
+        run: mvn versions:set -DnewVersion=${{ github.sha }}
+      - name: Deploy project to OSSRH
+        run: |
+          mvn deploy -DskipTests \
+            -Dmaven.javadoc.skip=true \
+            -Dmaven.source.skip=true \
+            -Dgpg.skip=true \
+            -DrepositoryId=ossrh \
+            -Durl=https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
+        env:
+          MAVEN_USERNAME: ${{ secrets.NEXUS_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
+
+
