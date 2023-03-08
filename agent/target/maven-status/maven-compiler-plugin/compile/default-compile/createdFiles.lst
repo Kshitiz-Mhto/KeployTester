@@ -3,8 +3,8 @@ io/keploy/agent/KAgent$1$1$1.class
 io/keploy/advice/ksql/HealthCheckInterceptor.class
 io/keploy/agent/KAgent$1$1.class
 io/keploy/advice/CustomGoogleResponseAdvice.class
-io/keploy/advice/ksql/RegisterDriverAdvice.class
 io/keploy/advice/redis/jedis/JedisPoolResource_Advice.class
+io/keploy/advice/ksql/RegisterDriverAdvice.class
 io/keploy/advice/ksql/DataBaseMetaData_Advice.class
 io/keploy/advice/ksql/RegisterDriverAdvice_Interceptor.class
 io/keploy/advice/ksql/RegisterDialect.class

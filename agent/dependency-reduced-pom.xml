@@ -9,7 +9,7 @@
   <artifactId>agent</artifactId>
   <name>Agent For Keploy SDK</name>
   <description>This agent is used to mock infra calls for an API</description>
-  <url>https://github.com/keploy/java-sdk</url>
+  <url>https://github.com/Kshitiz-Mhto/KeployTester</url>
   <issueManagement>
     <system>github</system>
     <url>https://github.com/Kshitiz-Mhto/KeployTester/issues</url>
@@ -28,9 +28,9 @@
     </license>
   </licenses>
   <scm>
-    <connection>scm:git@github.com:KeployTestor/java-sdk.git</connection>
-    <developerConnection>scm:git@github.com:KeployTestor/java-sdk.git</developerConnection>
-    <url>https://github.com/keploy/java-sdk.git</url>
+    <connection>scm:git@github.com:Kshitiz-Mhto/KeployTestor.git</connection>
+    <developerConnection>scm:git@github.com:Kshitiz-Mhto/KeployTestor.git</developerConnection>
+    <url>https://github.com/Kshitiz-Mhto/KeployTestor.git</url>
   </scm>
   <build>
     <plugins>

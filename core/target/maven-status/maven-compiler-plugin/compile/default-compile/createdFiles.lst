@@ -1,6 +1,6 @@
 io/keploy/regression/context/Context.class
-io/keploy/regression/KeployInstance.class
 io/keploy/regression/context/Kcontext.class
+io/keploy/regression/KeployInstance.class
 io/keploy/regression/keploy/Filter.class
 io/keploy/regression/keploy/AppConfig.class
 io/keploy/regression/keploy/ServerConfig.class
