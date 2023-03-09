@@ -6,12 +6,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Maven Library build 
-        run: mvn -B package -q
+        run: mvn -B test --cov .
       # - name: Upload coverage reports to Codecov
       #   uses: codecov/codecov-action@v3
       - name: Upload coverage reports to Codecov
         run: |
           curl -Os https://uploader.codecov.io/latest/linux/codecov
           chmod +x codecov
-          ./codecov -t ${CODECOV_TOKEN}
+          ./codecov -t -f ${CODECOV_TOKEN}
 
